@@ -98,7 +98,7 @@
         );
 
         if (filteredMovies.length === 0) {
-          moviesList.innerHTML = '<p>No movies found.</p>';
+          moviesList.innerHTML = '<p style="color:red">No movies found.</p>';
         } else {
           filteredMovies.forEach(movie => {
             const movieCard = document.createElement('div');
@@ -119,8 +119,8 @@
           });
         }
       } catch (error) {
-        showError('Error loading movies');
-        console.error('Error loading movies', error);
+        showError('No movies yet');
+        console.error('No movies yet', error);
       }
     }
 
