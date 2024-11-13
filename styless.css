@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: karla; */
+    background-color: #2a323f;
+}
+
+* {
+    font-family: karla;
+}
+
+.library-movies {
+    padding: 20px;
+}
+
+.modal {
+    padding: 20px;
+}
+
+
+.logoutBtn {
+  border: 2px solid white; 
+  background-color: transparent; 
+  color: white; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+.logoutBtn:hover {
+  background-color: white; 
+  color: #333; 
+  border-color: white; 
+}
+
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.input {
+    background-color: #2a323f;
+    border: 1px solid white;
+    color: white;
+}
+
+.input:focus {
+  outline: none; 
+  border: none;
+  border: 1px solid white;
+}
+
+
+#filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  margin: 20px 0;
+}
+
+#filters button {
+border: 2px solid white;
+  background-color: transparent;
+  color: white; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+
+#filters button:hover {
+  background-color:  #2a323f;
+  border-color: #2a323f;
+}
+
+/* Active state (when clicked) */
+/* #filters button:active {
+  background-color: white;
+  border-color:white;
+} */
+
+
+#filters button.selected {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #2a323f;
+}
+
+
+#movies-list {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* background-color: #f9f9f9; */
+  /* width: 100%; */
+  display: flex;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  background-color: #ffffff;
+  border: 1px solid white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.movie-card div {
+  margin-bottom: 10px;
+}
+
+.movie-card strong {
+  font-size: 18px;
+  color: #333;
+}
+
+.movie-card .star-rating {
+  color: #ff9900;
+  /* margin-left: 10px; */
+}
+
+
+.movie-card .actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-card button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #2a323f;
+}
+
+
+
+.movie-card button:focus {
+  outline: none;
+}
+
+.movie-card button:active {
+  background-color: #2758b7;
+}
+
+
+.movie-card button:nth-child(1) {
+  background-color:  #2a323f;
+  color: white;
+}
+
+
+
+.movie-card button:nth-child(2) {
+  background-color: #2a323f;
+  color: white;
+}
+
+
+
+.movie-card button:nth-child(3) {
+  background-color: #2a323f;
+  color: white;
+}
+
+
+
+.movie-card button:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+
+/* Modal Styles */
+
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none; /* Hidden by default */
+  width: 350px;
+  max-width: 100%;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none; /* Hidden by default */
+}
+
+/* Modal title */
+.modal h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Input fields */
+.modal input[type="text"],
+.modal input[type="number"] {
+  width: 100%;
+  padding: 0px;
+  height: 35px;
+  padding-left: 0px;
+  
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Checkbox label */
+.modal label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.modal button {
+  width: 48%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Save button */
+.modal button:nth-child(1) {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.modal button:nth-child(1):hover {
+  background-color: #45a049;
+}
+
+/* Cancel button */
+.modal button:nth-child(2) {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.modal button:nth-child(2):hover {
+  background-color: #e53935;
+}
